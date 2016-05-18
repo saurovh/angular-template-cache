@@ -1,0 +1,18 @@
+  <ul data-events class="feed_lcs_menu" ng-hide="feed.user().getUtId() === 1">
+        <li rg-likes="" target="likeTarget" like-type="{{::likeType}}">
+        <li ng-class="{'active':feed.selfComment() > 0}">
+        <a class="lcs_button" data-event-comment>
+        <i  class="icon-comments-str"></i>
+        <b>Comments</b>
+        </a>
+        <a class="count" data-event-comment>{{feed.getTotalComment()}}</a>
+        </li>
+        <li ng-if="!shareMenuDisabled" ng-class="{'active':feed.hasSharedFeed() ? feed.getOrginalFeed().share() > 0 : feed.share() > 0}">
+        <a class="lcs_button" data-event-share><i class="icon-share"></i><b>Share</b></a>
+        <a ng-href="{{ ::feed.getWhoShareUrl() }}" rg-ringbox="" ringbox-open="openRingboxShare()"
+        ringbox-controller="FeedRingboxWhoShareController" ringbox-scrollable="true" ringbox-type="remote"
+        ringbox-target="pages/home/whosharefeed.html" ringbox-data="getShareData()">{{ feed.hasSharedFeed() ?
+        feed.getOrginalFeed().getTotalShare() : feed.getTotalShare()}}
+        </a>
+        </li>
+        </ul>
