@@ -20,7 +20,7 @@ grunt.loadNpmTasks('angular-template-cache');
 ## The "angular-template-cache" task
 
 ### Overview
-In your project's Gruntfile, add a section named `grunt-angular-template-cache` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `angular-template-cache` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
