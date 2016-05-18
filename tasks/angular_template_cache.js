@@ -27,7 +27,7 @@ module.exports = function(grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  grunt.registerMultiTask('angular_template_cache', 'angular directive template are placed in index files for cache', function() {
+  grunt.registerMultiTask('angular-template-cache', 'angular directive template are placed in index files for cache', function() {
       var options = this.options({
       startTag: '<!--TEMPLATE_START-->',
       endTag: '<!--TEMPLATE_END-->',
