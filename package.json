@@ -1,5 +1,5 @@
 {
-  "name": "grunt-template-cache",
+  "name": "grunt-angular-template-cache",
   "description": "angular directive template are placed in index files for cache",
   "version": "0.1.0",
   "homepage": "https://github.com/fisherman/template-cache",

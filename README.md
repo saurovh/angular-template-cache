@@ -8,23 +8,23 @@ This plugin requires Grunt `~0.4.5`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-template-cache --save-dev
+npm install grunt-angular-template-cache --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-template-cache');
+grunt.loadNpmTasks('grunt-angular-template-cache');
 ```
 
 ## The "template_cache" task
 
 ### Overview
-In your project's Gruntfile, add a section named `template_cache` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `grunt-angular-template-cache` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  template_cache: {
+  'grunt-angular-template-cache': {
     options: {
       // Task-specific options go here.
     },
@@ -56,7 +56,7 @@ In this example, the default options are used to do something with whatever. So 
 
 ```js
 grunt.initConfig({
-  template_cache: {
+  'grunt-angular-template-cache': {
     options: {},
     files: {
       'dest/default_options': ['src/testing', 'src/123'],
