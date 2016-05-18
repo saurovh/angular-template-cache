@@ -1,6 +1,6 @@
-# grunt-template-cache
+# grunt-angular-template-cache
 
-> angular directive template are placed in index files for cache
+> For Angular directive template sometime we need to give the template in index file for `$templateCache` service to be cached. but our template remains in a seprate file. so there are two copies we needed to maintain. which slow down our development process. so by this grunt plugin you able to place your directive templateUrl contain inline in any file you want to use as ng-template.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
@@ -14,70 +14,73 @@ npm install grunt-angular-template-cache --save-dev
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-angular-template-cache');
+grunt.loadNpmTasks('angular-template-cache');
 ```
 
-## The "template_cache" task
+## The "angular-template-cache" task
 
 ### Overview
 In your project's Gruntfile, add a section named `grunt-angular-template-cache` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  'grunt-angular-template-cache': {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+  'angular-template-cache': {
+    default_options : {
+        options: {
+              startTag: '<!--TEMPLATE_START-->',
+              endTag: '<!--TEMPLATE_END-->',
+              appRoot: '',
+              relative: true,
+              fullName : false // test/fixtures/123.html  or 123.html   in script id 
+          },
+          files: {
+            'index.html': ['test/fixtures/123.html','test/fixtures/testing.html']
+           }
+      }
   },
 });
 ```
 
 ### Options
 
-#### options.separator
+#### options.startTag
 Type: `String`
-Default value: `',  '`
+Default value: `<!--TEMPLATE_START-->`
 
-A string value that is used to do something with whatever.
+A string value that is start point of the template content in index file
 
-#### options.punctuation
+#### options.endTag
 Type: `String`
-Default value: `'.'`
+Default value: `<!--TEMPLATE_END-->`
 
-A string value that is used to do something else with whatever else.
+A string value that is end point of the template content in index file
+
+#### options.fullName
+Type: `Bolean`
+Default value: `false`
+
+give the full url as script tag if or just the name
 
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+In this example, the default options are used to copy and minify the html content of 123.html and testing.html into index.html file inline as ng-template
 
 ```js
 grunt.initConfig({
-  'grunt-angular-template-cache': {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  template_cache: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+  'angular-template-cache': {
+    default_options : {
+        options: {
+              startTag: '<!--TEMPLATE_START-->',
+              endTag: '<!--TEMPLATE_END-->',
+              appRoot: '',
+              relative: true,
+              fullName : false // test/fixtures/123.html  or 123.html   in script id 
+          },
+          files: {
+            'index.html': ['test/fixtures/123.html','test/fixtures/testing.html']
+           }
+      }
   },
 });
 ```
