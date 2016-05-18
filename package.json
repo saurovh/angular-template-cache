@@ -1,8 +1,8 @@
 {
   "name": "grunt-angular-template-cache",
   "description": "angular directive template are placed in index files for cache",
-  "version": "0.1.1",
-  "homepage": "https://github.com/fisherman/template-cache",
+  "version": "0.1.2",
+  "homepage": "https://github.com/saurovh/angular-template-cache",
   "author": {
     "name": "Msi Saurovh",
     "email": "msi.saurovh@gmail.com"
