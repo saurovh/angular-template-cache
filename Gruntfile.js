@@ -43,6 +43,6 @@ module.exports = function(grunt) {
   grunt.registerTask('template-cache', ['grunt-angular-template-cache']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['angular-template-cache']);
+  grunt.registerTask('default', ['grunt-angular-template-cache']);
 
 };

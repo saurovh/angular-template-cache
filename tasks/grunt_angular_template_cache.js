@@ -68,7 +68,8 @@ module.exports = function(grunt) {
                 template = grunt.file.read(filepath);
                  minified = escapeString(minify(template, {
                   preventAttributesEscaping: true,
-                  collapseWhitespace: true
+                  collapseWhitespace: true,
+                  removeComments: true
                 }));
               }catch(e){
                 console.log("template not found");
