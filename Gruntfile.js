@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
        // Configuration to be run (and then tested).
-    'angular-template-cache': {
+    'grunt-angular-template-cache': {
       default_options : {
         options: {
               startTag: '<!--TEMPLATE_START-->',
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('template-cache', ['angular-template-cache']);
+  grunt.registerTask('template-cache', ['grunt-angular-template-cache']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['angular-template-cache']);

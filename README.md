@@ -14,17 +14,17 @@ npm install grunt-angular-template-cache --save-dev
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('angular-template-cache');
+grunt.loadNpmTasks('grunt-angular-template-cache');
 ```
 
-## The "angular-template-cache" task
+## The "grunt-angular-template-cache" task
 
 ### Overview
-In your project's Gruntfile, add a section named `angular-template-cache` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `grunt-angular-template-cache` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  'angular-template-cache': {
+  'grunt-angular-template-cache': {
     default_options : {
         options: {
               startTag: '<!--TEMPLATE_START-->',
@@ -68,7 +68,7 @@ In this example, the default options are used to copy and minify the html conten
 
 ```js
 grunt.initConfig({
-  'angular-template-cache': {
+  'grunt-angular-template-cache': {
     default_options : {
         options: {
               startTag: '<!--TEMPLATE_START-->',
