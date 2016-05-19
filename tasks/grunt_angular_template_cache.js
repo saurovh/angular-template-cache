@@ -66,11 +66,11 @@ module.exports = function(grunt) {
             var template,minified;
               try {
                 template = grunt.file.read(filepath);
-                 minified = escapeString(minify(template, {
+                 minified = minify(template, {
                   preventAttributesEscaping: true,
                   collapseWhitespace: true,
                   removeComments: true
-                }));
+                });
               }catch(e){
                 console.log("template not found");
                 minified = "Grunt Error code not read file"
