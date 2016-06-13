@@ -72,8 +72,8 @@ module.exports = function(grunt) {
                   removeComments: true
                 });
               }catch(e){
-                console.log("template not found");
-                minified = "Grunt Error code not read file"
+                console.log("Error : "+e.message);
+                minified = e.message;
               }
 
 
